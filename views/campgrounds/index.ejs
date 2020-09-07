@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+<!-- ../ goes to parent folder and then looks there -->
+
+<div class = "container">
+	<header class="jumbotron">
+		<div class = "container">
+			<h1>Welcome to SK Camps</h1>
+		<p>The Best Campgrounds Money Can Buy</p>
+		<p>
+			<a class="btn btn-primary btn-lg" href = "/campgrounds/new">Add New Campground</a>
+		</p>
+		</div>
+	</header>
+	<div class = "row text-center" style = "display: flex; flex-wrap: wrap;">
+		<% campgrounds.forEach(function(camp){ %>
+			<div class = "col-md-3 col-sm-6">
+				<div class = "thumbnail">
+					<img src = "<%= camp.image %>">
+					<div class = "caption"><h4><%= camp.name %></h4></div>
+					<p><a href="campgrounds/<%= camp._id %>" class="btn btn-default" role="button">More Info</a></p>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+<a href = "/">Home</a>
+
+
+	
+</div>
+
+<%- include("../partials/footer") %>
