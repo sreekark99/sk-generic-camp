@@ -72,7 +72,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 
-
-app.listen(3000, function(){
-	console.log("Yelp Server Started");
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Connected to SK server");
 });
