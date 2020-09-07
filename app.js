@@ -13,15 +13,6 @@ mongoose.connect(process.env.DATABASEURL, {
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
 
-//process.env.DATABASEURL = "mongodb://localhost/yelp_camp";
-//console.log(process.env.DATABASEURL)
-
-// mongoose.connect('mongodb+srv://sreekar:Sreekar5799@sk-generic-camp.yx4jt.mongodb.net/SK-generic-camp?retryWrites=true&w=majority', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// })
-// .then(() => console.log('Connected to DB!'))
-// .catch(error => console.log(error.message));
 
 
 app.set("view engine", "ejs");
