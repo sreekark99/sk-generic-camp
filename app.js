@@ -6,7 +6,14 @@ var passport = require("passport");
 var flash = require('connect-flash-plus');
 var localstrategy = require("passport-local");
 var methodoverride = require("method-override");
-mongoose.connect('mongodb://localhost/yelp_camp', {
+// mongoose.connect('mongodb://localhost/yelp_camp', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// .then(() => console.log('Connected to DB!'))
+// .catch(error => console.log(error.message));
+
+mongoose.connect('mongodb+srv://sreekar:Sreekar5799@sk-generic-camp.yx4jt.mongodb.net/SK-generic-camp?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
