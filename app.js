@@ -15,7 +15,10 @@ mongoose.connect(url, {
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
 
+<<<<<<< HEAD
 //process.env.DATABASEURL = "mongodb://localhost/yelp_camp"; 
+=======
+>>>>>>> b6acc07fd0de90f1225257b765dc8fa3b9af82a2
 
 
 app.set("view engine", "ejs");
