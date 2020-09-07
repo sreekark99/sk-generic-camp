@@ -6,19 +6,22 @@ var passport = require("passport");
 var flash = require('connect-flash-plus');
 var localstrategy = require("passport-local");
 var methodoverride = require("method-override");
-// mongoose.connect('mongodb://localhost/yelp_camp', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// })
-// .then(() => console.log('Connected to DB!'))
-// .catch(error => console.log(error.message));
-
-mongoose.connect('mongodb+srv://sreekar:Sreekar5799@sk-generic-camp.yx4jt.mongodb.net/SK-generic-camp?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
+
+//process.env.DATABASEURL = "mongodb://localhost/yelp_camp";
+//console.log(process.env.DATABASEURL)
+
+// mongoose.connect('mongodb+srv://sreekar:Sreekar5799@sk-generic-camp.yx4jt.mongodb.net/SK-generic-camp?retryWrites=true&w=majority', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// .then(() => console.log('Connected to DB!'))
+// .catch(error => console.log(error.message));
 
 
 app.set("view engine", "ejs");
@@ -73,6 +76,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 var port = process.env.PORT || 3000;
-app.listen(port, function () {
+var ip = process.env.IP;
+app.listen(port, ip, function () {
   console.log("Connected to SK server");
 });
