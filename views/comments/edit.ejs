@@ -1,7 +1,7 @@
 <%- include("../partials/header") %>
 
 <div class = "container">
-	<h1 style = "text-align: center">Welcome <%=comment.author.username%>, edits your comment on <%=campground.name%></h1>
+	<h1 style = "text-align: center">Welcome <strong><%=comment.author.username%></strong>, edit your comment on <strong><em><%=campground.name%></em></strong></h1>
 	<div class = "row">
 		<div style = "width: 30%; margin: 40px auto" >
 			<form action = "/campgrounds/<%=campground._id%>/comments/<%=comment._id%>?_method=PUT" method = "POST">
@@ -9,10 +9,10 @@
 					<input class = "form-control" type = "text" value = "<%=comment.text%>" name = "comment[text]">
 				</div>
 				<div class = "form-group">
-					<input class = "btn btn-default btn-lg btn-block" type = "submit">
+					<input class = "btn btn-grad btn-default btn-lg btn-block" type = "submit">
 				</div>
 			</form>
-			<a href = "/campgrounds/<%=campground._id%>">Go Back</a>
+			<a class = "btn-grad btn btn-default btn-sm" href = "/campgrounds/<%=campground._id%>">Go Back</a>
 		</div>
 		
 	</div>

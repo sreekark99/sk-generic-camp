@@ -79,7 +79,8 @@ router.put("/:id", middleware.campground_authorization, function(req, res){
 	var data = {
 		name: req.body.name,
 		image: req.body.image,
-		description: req.body.description
+		description: req.body.description,
+		price: req.body.price
 	};
 	campground.findByIdAndUpdate(req.params.id, data, function(err, updated_camp){
 		if (err){

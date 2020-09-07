@@ -1,10 +1,22 @@
+body{
+background-image: linear-gradient(to left, #ffffff, #f0f4fe, #d8ecfc, #bae5f4, #9edfe4);
+font-family: 'Kufam', cursive;
+
+
+}
+
 .thumbnail img{
 	width: 100%;
 }
 
-.thumbnail{
+.thumbnail.ind{
 	padding: 0;
-}
+	background-color: #f2f2f2;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	
+};
+
 
 .thumbnail .caption-full{
 	padding: 10px;
@@ -14,3 +26,28 @@
 .delete-form{
 	display: inline;
 }
+
+.btn-grad {
+	background-image: linear-gradient(to right, #000000 0%, #1f1f1f 51%, #000000 100%);
+	color:white;
+};
+
+
+a {
+  color: blue;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+    background:#454545;
+	color: #ffffff;
+	
+    }
+.btn:active:focus { 
+    color: #FFFFFF;
+    }
+.btn:focus { 
+    background: #325d88;
+    color: #FFFFFF;
+    }

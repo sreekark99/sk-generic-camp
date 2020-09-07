@@ -7,22 +7,23 @@
 			<h1>Welcome to SK Camps</h1>
 		<p>The Best Campgrounds Money Can Buy</p>
 		<p>
-			<a class="btn btn-primary btn-lg" href = "/campgrounds/new">Add New Campground</a>
+			<a class="btn-grad btn btn-primary btn-lg" href = "/campgrounds/new">Add New Campground</a>
 		</p>
 		</div>
 	</header>
 	<div class = "row text-center" style = "display: flex; flex-wrap: wrap;">
 		<% campgrounds.forEach(function(camp){ %>
 			<div class = "col-md-3 col-sm-6">
-				<div class = "thumbnail">
+				<div class = "thumbnail ind">
 					<img src = "<%= camp.image %>">
-					<div class = "caption"><h4><%= camp.name %></h4></div>
+					<div class = "caption"><h4><strong><%= camp.name %></strong></h4></div>
 					<p><a href="campgrounds/<%= camp._id %>" class="btn btn-default" role="button">More Info</a></p>
 				</div>
 			</div>
 		<% }) %>
 	</div>
-<a href = "/">Home</a>
+	<a class = "btn btn-primary btn-xs" href = "/">Home</a>
+
 
 
 	
