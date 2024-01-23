@@ -9,11 +9,11 @@ var methodoverride = require("method-override");
 
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 mongoose.connect(url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+	useNewUrlParser: true,
+	useUnifiedTopology: true
 })
-.then(() => console.log('Connected to DB!'))
-.catch(error => console.log(error.message));
+	.then(() => console.log('Connected to DB!'))
+	.catch(error => console.log(error.message));
 
 // <<<<<<< HEAD
 // //process.env.DATABASEURL = "mongodb://localhost/yelp_camp"; 
@@ -23,7 +23,7 @@ mongoose.connect(url, {
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodoverride("_method"));
 app.use(flash());
 
@@ -57,7 +57,7 @@ passport.use(new localstrategy(user.authenticate()));
 passport.serializeUser(user.serializeUser());
 passport.deserializeUser(user.deserializeUser());
 
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
 	res.locals.currentUser = req.user;
 	res.locals.success = req.flash("success");
 	res.locals.error = req.flash("error");
@@ -75,5 +75,5 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 var port = process.env.PORT || 3000;
 var ip = process.env.IP;
 app.listen(port, ip, function () {
-  console.log("Connected to SK server");
+	console.log("Connected to SK Camps server");
 });
